@@ -7,16 +7,28 @@
 }
 
 body {
-  background-color: #5baef6;
+  overflow: hidden;
+  transition: background 5s;
+}
+
+.body-container {
   background: url(waves.svg) no-repeat center center #5baef6;
   background-size: cover;
   text-align: start;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   height: 100vh;
   width: 100%;
+  transition: background 5s;
   overflow: hidden;
 }
+.body-container.active {
+  background: url(waves2.svg) no-repeat center center,
+    linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
+  background-size: cover;
 
+  overflow: hidden;
+  transition: background 5s;
+}
 h1 {
   font-size: 3rem;
 
@@ -71,10 +83,26 @@ p:hover {
   font-weight: 400;
   font-size: 1rem;
   transition: background 0.3s;
+  cursor: pointer;
 }
 
 .btn_ins:hover {
   background-color: #6d69fa;
+}
+
+.speed_btn {
+  position: absolute;
+  bottom: 440px;
+  right: 10px;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #5151f3;
+  color: #fafafa;
+  font-weight: 400;
+  font-size: 1rem;
+  transition: background 0.3s;
+  cursor: pointer;
 }
 
 #img {
@@ -84,14 +112,15 @@ p:hover {
 }
 #birds {
   position: absolute;
-  bottom: -700px;
-  right: 0;
+  bottom: -600px;
+  right: 20px;
   width: 600px;
+  overflow-y: hidden;
   transition: transform 7s;
 }
 
 #birds.active {
-  transform: translateY(-1200px);
+  transform: translateY(-1000px);
 }
 #img.active {
   transform: translateX(-2500px);
