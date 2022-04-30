@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #5baef6;
+  background: url(waves.svg) no-repeat center center #5baef6;
+  background-size: cover;
+  text-align: start;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 3rem;
+
+  color: rgb(56, 53, 53);
+  margin-bottom: 25px;
+}
+
+.departure {
+  max-width: 600px;
+  margin: 40px;
+  padding-top: 40px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+h6 {
+  word-spacing: 50px;
+  font-size: 1.6rem;
+  font-weight: 200;
+}
+
+h3 {
+  font-size: 6.5rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.509);
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+}
+
+p:hover {
+  color: rgb(0, 0, 0);
+  font-weight: 300;
+}
+
+.btn_ins {
+  align-self: center;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #2424c7;
+  color: #fafafa;
+  font-weight: 400;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.btn_ins:hover {
+  background-color: #6d69fa;
+}
+
+#img {
+  position: absolute;
+  right: 0px;
+  transition: transform 7s;
+}
+#birds {
+  position: absolute;
+  bottom: -700px;
+  right: 0;
+  width: 600px;
+  transition: transform 7s;
+}
+
+#birds.active {
+  transform: translateY(-1200px);
+}
+#img.active {
+  transform: translateX(-2500px);
+  /*animation: right-to-left 3s;*/
+}
+
+@keyframes right-to-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-500%);
+  }
+}
