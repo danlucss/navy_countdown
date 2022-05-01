@@ -32,11 +32,15 @@ let myFunc = setInterval(function () {
 
   if (timeLeft < 0) {
     clearInterval(myFunc)
+
+    //Change the Countdown visor
     document.getElementById('days').innerHTML = ''
     document.getElementById('hours').innerHTML = ''
     document.getElementById('minutes').innerHTML = ''
     document.getElementById('seconds').innerHTML = ''
     document.getElementById('end').innerHTML = 'Time is up!'
+
+    //Change the Styles color
     img.classList.add('active')
     sunset.classList.add('active')
     body.classList.add('active')
@@ -44,9 +48,21 @@ let myFunc = setInterval(function () {
     ins_btn.innerHTML = 'Grab a coconut!'
 
     speed_btn.style.display = 'none'
+
+    // SVG color change
+
+    wave1.style.fill = '#fb7bc3'
+    wave2.style.fill = '#009bff'
+    wave3.style.fill = '#fb7bc3'
+    wave4.style.fill = '#0099ff'
   }
 }, interval)
 
 // Message Final
 
-// button active
+// button /
+
+const wave1 = document.getElementsByClassName('wave-1')[0]
+const wave2 = document.getElementsByClassName('wave-2')[0]
+const wave3 = document.getElementsByClassName('wave-3')[0]
+const wave4 = document.getElementsByClassName('wave-4')[0]

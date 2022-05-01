@@ -8,38 +8,55 @@
 
 body {
   overflow: hidden;
-  transition: background 5s;
+}
+
+img {
+  width: 500px;
 }
 
 .body-container {
-  background: url('waves.svg') no-repeat center center #5baef6;
+  background: #5baef6;
   background-size: cover;
   text-align: start;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   height: 100vh;
   width: 100%;
-  transition: background 7s;
+  transition: all 7s;
   overflow: hidden;
+  transition: all 5s ease-in-out;
+  background: linear-gradient(
+    90deg,
+    #5baef6 6%,
+    rgba(247, 233, 60, 0.6699054621848739) 35%,
+    rgba(145, 86, 239, 0.519) 100%
+  );
+  background-size: 400%;
 }
 .body-container.active {
-  background: url(wavws-sunset.svg) no-repeat center center,
-    linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
-  background-size: cover;
-
   overflow: hidden;
-  transition: background 5s;
-  animation: bg-animation 7s 1;
+  transition: all 5s ease-in-out;
+  background: linear-gradient(
+    90deg,
+    #5baef6 6%,
+    rgba(247, 233, 60, 0.6699054621848739) 35%,
+    rgba(145, 86, 239, 0.519) 100%
+  );
+
+  background-size: 400% 100%;
+  animation-name: bg-animation;
+  animation-duration: 7s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 @keyframes bg-animation {
   0% {
-    background: url(waves.svg) no-repeat center center #5baef6;
-    background-size: cover;
+    background-position: 0% 50%;
   }
+  50%,
   100% {
-    background: url(wavws-sunset.svg) no-repeat bottom bottom,
-      linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
-    background-size: cover;
+    background-position: 100% 50%;
   }
 }
 h1 {
@@ -114,12 +131,13 @@ p:hover {
 
 .speed_btn {
   position: absolute;
-  bottom: 440px;
-  right: 10px;
+  left: 460px;
+  top: 290px;
+
   border: none;
   padding: 15px;
   border-radius: 5px;
-  background-color: #5151f3;
+  background-color: #5151f300;
   color: #fafafa;
   font-weight: 400;
   font-size: 1rem;
@@ -130,14 +148,15 @@ p:hover {
 #img {
   position: absolute;
   right: 0px;
-  bottom: 350px;
+  bottom: 270px;
+
   transition: transform 7s;
 }
 #sunset {
   position: absolute;
   bottom: -600px;
   right: 20px;
-  width: 600px;
+  width: 400px;
   overflow-y: hidden;
   transition: transform 7s;
 }
@@ -156,5 +175,56 @@ p:hover {
   }
   100% {
     transform: translateX(-500%);
+  }
+}
+
+/* WAVES */
+
+.waves {
+  position: absolute;
+  z-index: 1000;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 120%;
+}
+
+.wave-1 {
+  animation: wave-1 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes wave-1 {
+  from {
+    transform: translateX(-100px);
+  }
+}
+
+.wave-2 {
+  animation: wave-2 3s 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes wave-2 {
+  from {
+    transform: translateX(-100px);
+  }
+}
+
+.wave-3 {
+  animation: wave-3 1s 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes wave-3 {
+  from {
+    transform: translateX(-50px);
+  }
+}
+
+.wave-4 {
+  animation: wave-4 2s 2s ease-in-out infinite alternate;
+}
+
+@keyframes wave-4 {
+  from {
+    transform: translateX(-100px);
   }
 }
