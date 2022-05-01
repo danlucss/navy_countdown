@@ -42,6 +42,8 @@ let myFunc = setInterval(function () {
     body.classList.add('active')
     ins_btn.classList.add('active')
     ins_btn.innerHTML = 'Grab a coconut!'
+
+    speed_btn.style.display = 'none'
   }
 }, interval)
 
