@@ -12,7 +12,7 @@ body {
 }
 
 .body-container {
-  background: url(waves.svg) no-repeat center center #5baef6;
+  background: url('waves.svg') no-repeat center center #5baef6;
   background-size: cover;
   text-align: start;
   font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -22,7 +22,7 @@ body {
   overflow: hidden;
 }
 .body-container.active {
-  background: url(waves-sunset.svg) no-repeat center center,
+  background: url(assets/img/layered-waves-haikei.png) no-repeat center center,
     linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
   background-size: cover;
 
@@ -33,11 +33,11 @@ body {
 
 @keyframes bg-animation {
   0% {
-    background: url(assets/img/waves.svg) no-repeat center center #5baef6;
+    background: url(waves.svg) no-repeat center center #5baef6;
     background-size: cover;
   }
   100% {
-    background: url(assets/img/waves-sunset.svg) no-repeat bottom bottom,
+    background: url(assets/img/layered-waves-haikei.png) no-repeat bottom bottom,
       linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
     background-size: cover;
   }
