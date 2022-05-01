@@ -18,11 +18,11 @@ body {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   height: 100vh;
   width: 100%;
-  transition: background 7s;
+  transition: background 5s;
   overflow: hidden;
 }
 .body-container.active {
-  background: url(waves-sunset.svg) no-repeat center center,
+  background: url(waves2.svg) no-repeat center center,
     linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
   background-size: cover;
 
@@ -33,11 +33,11 @@ body {
 
 @keyframes bg-animation {
   0% {
-    background: url(assets/img/waves.svg) no-repeat center center #5baef6;
+    background: url(waves.svg) no-repeat center center #5baef6;
     background-size: cover;
   }
   100% {
-    background: url(assets/img/waves-sunset.svg) no-repeat bottom bottom,
+    background: url(waves2.svg) no-repeat bottom bottom,
       linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
     background-size: cover;
   }
