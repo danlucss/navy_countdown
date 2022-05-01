@@ -28,6 +28,19 @@ body {
 
   overflow: hidden;
   transition: background 5s;
+  animation: bg-animation 7s 1;
+}
+
+@keyframes bg-animation {
+  0% {
+    background: url(waves.svg) no-repeat center center #5baef6;
+    background-size: cover;
+  }
+  100% {
+    background: url(waves2.svg) no-repeat bottom bottom,
+      linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
+    background-size: cover;
+  }
 }
 h1 {
   font-size: 3rem;
@@ -120,7 +133,7 @@ p:hover {
 }
 
 #birds.active {
-  transform: translateY(-1000px);
+  transform: translateY(-1100px);
 }
 #img.active {
   transform: translateX(-2500px);

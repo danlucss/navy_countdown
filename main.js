@@ -1,8 +1,9 @@
 //  Countdown Date
-let countdownDate = new Date('April 30, 2022 18:00:00').getTime()
+let countdownDate = new Date('May, 2022 18:00:00').getTime()
 
 const bird = document.getElementById('birds')
 const body = document.getElementsByClassName('body-container')[0]
+const speed_btn = document.getElementById('speed_btn')
 
 // time variables
 let interval = 1000
@@ -45,5 +46,3 @@ let myFunc = setInterval(function () {
 // Message Final
 
 // button active
-
-const speed_btn = document.getElementById('speed_btn')
