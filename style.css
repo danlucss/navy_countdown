@@ -5,7 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+img {
+  width: 500px; 
+}
 body {
   overflow: hidden;
   transition: background 5s;
