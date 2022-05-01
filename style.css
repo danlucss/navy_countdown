@@ -22,7 +22,7 @@ body {
   overflow: hidden;
 }
 .body-container.active {
-  background: url(assets/img/layered-waves-haikei.png) no-repeat center center,
+  background: url(wavws-sunset.svg) no-repeat center center,
     linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
   background-size: cover;
 
@@ -37,7 +37,7 @@ body {
     background-size: cover;
   }
   100% {
-    background: url(assets/img/layered-waves-haikei.png) no-repeat bottom bottom,
+    background: url(wavws-sunset.svg) no-repeat bottom bottom,
       linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
     background-size: cover;
   }
@@ -97,10 +97,19 @@ p:hover {
   font-size: 1rem;
   transition: background 0.3s;
   cursor: pointer;
+  border: none;
 }
 
 .btn_ins:hover {
   background-color: #6d69fa;
+}
+
+.btn_ins.active {
+  background-color: #5806e5;
+  transition: background-color 0.5s;
+}
+.btn_ins.active:hover {
+  background-color: #8c4bfd;
 }
 
 .speed_btn {
@@ -121,9 +130,10 @@ p:hover {
 #img {
   position: absolute;
   right: 0px;
+  bottom: 350px;
   transition: transform 7s;
 }
-#birds {
+#sunset {
   position: absolute;
   bottom: -600px;
   right: 20px;
@@ -132,7 +142,7 @@ p:hover {
   transition: transform 7s;
 }
 
-#birds.active {
+#sunset.active {
   transform: translateY(-1100px);
 }
 #img.active {

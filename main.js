@@ -1,9 +1,10 @@
 //  Countdown Date
 let countdownDate = new Date('May, 2022 18:00:00').getTime()
 
-const bird = document.getElementById('birds')
+const sunset = document.getElementById('sunset')
 const body = document.getElementsByClassName('body-container')[0]
 const speed_btn = document.getElementById('speed_btn')
+const ins_btn = document.getElementById('btn_ins')
 
 // time variables
 let interval = 1000
@@ -37,9 +38,10 @@ let myFunc = setInterval(function () {
     document.getElementById('seconds').innerHTML = ''
     document.getElementById('end').innerHTML = 'Time is up!'
     img.classList.add('active')
-    bird.classList.add('active')
-
+    sunset.classList.add('active')
     body.classList.add('active')
+    ins_btn.classList.add('active')
+    ins_btn.innerHTML = 'Grab a coconut!'
   }
 }, interval)
 
