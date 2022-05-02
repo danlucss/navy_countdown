@@ -1,5 +1,5 @@
 //  Countdown Date
-let countdownDate = new Date('May, 2022 18:00:00').getTime()
+let countdownDate = new Date('May 03, 2022 18:00:00').getTime()
 
 const sunset = document.getElementById('sunset')
 const body = document.getElementsByClassName('body-container')[0]
@@ -51,10 +51,10 @@ let myFunc = setInterval(function () {
 
     // SVG color change
 
-    wave1.style.fill = '#fb7bc3'
-    wave2.style.fill = '#009bff'
-    wave3.style.fill = '#fb7bc3'
-    wave4.style.fill = '#0099ff'
+    wave1.style.fill = '#023059'
+    wave2.style.fill = 'linear-gradient(#0367A6, #023059)'
+    wave3.style.fill = 'rgba(246, 20, 152, 0.519) '
+    wave4.style.fill = '#0367A6'
   }
 }, interval)
 
