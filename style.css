@@ -10,6 +10,7 @@ img {
 }
 body {
   overflow: hidden;
+  font-size: 100%;
 }
 
 img {
@@ -232,11 +233,21 @@ p:hover {
 }
 
 @media (max-width: 1200px) {
+  body {
+    font-size: 80%;
+  }
+
   #img {
     display: none;
   }
 
   #sunset {
     display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 65%;
   }
 }
