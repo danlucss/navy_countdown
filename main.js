@@ -1,5 +1,5 @@
 //  Countdown Date
-let countdownDate = new Date('May 03, 2022 18:00:00').getTime()
+let countdownDate = (new Date('May 03, 2022 18:00:00').getTime()) + 1000000000;
 
 const sunset = document.getElementById('sunset')
 const body = document.getElementsByClassName('body-container')[0]
